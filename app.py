@@ -38,8 +38,8 @@ def run():
     if add_selectbox == 'Online':
         
         tweet = st.text_input("Enter your Tweet: ","Your tweet here")
-        keyword = st.text_input("Enter your Tweet: ","Your keyword here, if you don't have one, leave it blank")
-        location = st.text_input("Enter your Tweet: ","Location here, if you don't have one, leave it blank")
+        keyword = st.text_input("Enter your keyword: ","Your keyword here, if you don't have one, delete these texts")
+        location = st.text_input("Enter your Location: ","Location here, if you don't have one, delete these texts")
 
 
         output=""
