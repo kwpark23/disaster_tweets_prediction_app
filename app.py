@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import random 
 
-model = load_model('Final LDA Model 07Nov2022')
+model = load_model('Final Model 8Nov2022')
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
@@ -38,10 +38,13 @@ def run():
     if add_selectbox == 'Online':
         
         tweet = st.text_input("Enter your Tweet: ","Your tweet here")
+        keyword = st.text_input("Enter your Tweet: ","Your keyword here, if you don't have one, leave it blank")
+        location = st.text_input("Enter your Tweet: ","Location here, if you don't have one, leave it blank")
+
 
         output=""
         
-        input_dict = {'text' : tweet}
+        input_dict = {'text' : tweet, 'keyword':keyword, 'location':location}
         input_df = pd.DataFrame([input_dict])
 
         if st.button("Predict"):
