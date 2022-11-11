@@ -1,4 +1,7 @@
 from pycaret.regression import load_model, predict_model
+from pycaret.classification import *
+from pycaret.nlp import *
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -11,8 +14,7 @@ def predict(model, input_df):
     predictions = predictions_df['Label'][0]
     return predictions
 
-def run():
-
+def run():    
     from PIL import Image
     forestfire = Image.open('forestfire.jpg')
     flooding = Image.open('flooding.jpg')
@@ -37,9 +39,9 @@ def run():
 
     if add_selectbox == 'Online':
         
-        tweet = st.text_input("Enter your Tweet: ","Your tweet here")
-        keyword = st.text_input("Enter your keyword: ","Your keyword here, if you don't have one, delete these texts")
-        location = st.text_input("Enter your Location: ","Location here, if you don't have one, delete these texts")
+        tweet = st.text_input("Enter your Tweet: ","")
+        keyword = st.text_input("Enter your keyword: ","")
+        location = st.text_input("Enter your Location: ","")
 
 
         output=""
