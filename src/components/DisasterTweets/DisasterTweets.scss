@@ -1,0 +1,116 @@
+@import '../../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
+.DisasterTweets {
+    // width:100vw;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:start;
+    background: black;
+    padding:5em 0;
+    max-width: 100%;
+    width:100%;
+    .inner{
+        margin-top:2em;
+        // background:rgba(255, 255, 255, 0.235);
+        border:2px solid grey;
+        padding:2em;
+        border-radius:1em;
+        // display:flex;
+        .upper{
+            display:flex;
+            align-items:flex-start;
+            .profile__pic {
+                width:3.5em;
+                height:3.5em;border-radius:2em;
+            }
+            .input__container{
+                display:flex;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+            .location__container {
+                display:flex;
+                align-items:center;
+                .material-symbols-outlined {
+                    margin-left:0.8em;
+                    color:lightgrey;
+                }
+            }
+            input, textarea, .tweet__div{
+                color:white;
+                background:0;
+                border:0;
+                outline:0;
+                font-size:1.6em;
+                padding:0.4em 0.4em;
+                margin: 0 0.5em;
+                &:focus{
+                    border-bottom:1px solid white;
+                }
+                &#location {
+                    font-size:1.3em;
+                    padding-left:0;
+                }
+            }
+            .tweet__div{
+                width: 275px;
+                font-size: 1.2em;
+            }
+        }
+        .button__container {
+            display:flex;
+            justify-content: flex-end;
+            align-items:center;
+            margin-top:1em;
+            .tweet__button {
+                color:white;
+                background:#0098f1;
+                border:0;
+                border-radius:5em;
+                padding:0.5em 1em;
+                font-weight:bold;
+                font-size:1.2em;
+                cursor:pointer;
+                transition: all ease 0.2s;
+                &:hover{
+                    background:#36b5ff;
+                }
+            }
+        }
+        .distaster__status__container{
+            color:#0098f1;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            margin-top:1em;
+            margin:1em;
+        }
+        .past__tweet {
+            font-size: 0.8em;
+        }
+    }
+
+    .clear__tweets__container{
+        padding-top: 4em;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        .clear__tweets__button{ 
+            color:white;
+            background:#0098f1;
+            border:0;
+            border-radius:5em;
+            padding:0.5em 1em;
+            font-weight:bold;
+            font-size:1.2em;
+            cursor:pointer;
+            transition: all ease 0.2s;
+            &:hover{
+                background:#36b5ff;
+            }
+        }
+    }
+}
